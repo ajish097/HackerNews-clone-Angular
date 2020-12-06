@@ -6,22 +6,6 @@
     padding: 0%;
 }
 
-.top-bar {
-    background-color: #ff6600;
-    padding-left: .3%;
-}
-.top-bar-child {
-    margin: 0%;
-    display: inline-block;
-}
-a.top-bar-child {
-    float: right;
-    margin-right: .2%;
-    line-height: 1.5rem;
-    cursor: pointer;
-    background-color: inherit;
-}
-
 .container h2 {
     text-align: left;
     padding-left: .5rem;
