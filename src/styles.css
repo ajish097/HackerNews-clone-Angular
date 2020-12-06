@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+
+.container {
+    background-color: #f6f6ef;
+    margin: 0% 5% 0% 5% ;
+    padding: 0%;
+}
+
+.top-bar {
+    background-color: #ff6600;
+    padding-left: .3%;
+}
+.top-bar-child {
+    margin: 0%;
+    display: inline-block;
+}
+a.top-bar-child {
+    float: right;
+    margin-right: .2%;
+    line-height: 1.5rem;
+    cursor: pointer;
+    background-color: inherit;
+}
+
+.container h2 {
+    text-align: left;
+    padding-left: .5rem;
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: #ff6600;
+}
+
+a.item-row, span.item-row {
+    text-decoration: none;
+    color: rgb(0, 0, 0); 
+    font-size: 10pt;
+}
+
+
+.itemlist  {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+a:hover {
+    color: rgb(59, 59, 59);
+}
+
+a:visited {
+    color: rgb(97, 97, 97); 
+}
+.subtext {
+    font-size: 7pt;
+    color: #828282;
+    padding-left: 1.2rem;
+}
+.subtext-row {
+    padding-left: 1.2rem;
+}

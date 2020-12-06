@@ -1,23 +1,28 @@
-<nz-input-group [nzSuffix]="suffixIconSearch">
-    <input type="text" nz-input placeholder="input search text" [(ngModel)]="name" />
-</nz-input-group>
-<ng-template #suffixIconSearch>
-    <i nz-icon nzType="search"></i>
-</ng-template>
-<br />
-<br />
-<nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
-    <input type="text" nz-input placeholder="input search text" />
-</nz-input-group>
-<ng-template #suffixIconButton>
-    <button nz-button nzType="primary" nzSearch><i nz-icon nzType="search"></i></button>
-</ng-template>
-<br />
-<br />
-<nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="suffixButton">
-    <input type="text" nz-input placeholder="input search text" />
-</nz-input-group>
-<ng-template #suffixButton>
-    <button nz-button nzType="primary" nzSize="large" nzSearch>Search</button>
-</ng-template>
-<p> My name is {{name}} </p>
+<div class="container">
+    <div class="top-bar">
+        <img class="top-bar-child" style="border:1px white solid;" src='https://news.ycombinator.com/y18.gif' />
+        <h2 class="top-bar-child"> Hacker News </h2>
+        <a class="top-bar-child"> login </a>
+    </div>
+    <div class="itemlist">
+        <table>
+            <tbody>
+                <div *ngFor="let item of items; index as i">
+                    <tr>
+                        <td>
+                            <span class="item-row"> {{ i+1 }}. </span>
+                            <a class="item-row" [href]="item.url">{{item.title}}</a>
+                        </td>
+                    </tr>
+                    <tr class="subtext">
+                        <td class="subtext-row">
+                            <span>{{item.score}} points by {{item.by}}</span>
+                            <span> | </span>
+                            <span>{{item.score}} comments</span>
+                        </td>
+                    </tr>
+                </div>
+            </tbody>
+        </table>
+    </div>
+</div>

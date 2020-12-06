@@ -6,6 +6,11 @@ export const environment = {
   production: false
 };
 
+export const ENDPOINTS = {
+  baseUrl : ' https://hacker-news.firebaseio.com/v0/',
+  topStories: 'topstories.json',
+  item: 'item/'
+}
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
