@@ -1,24 +1,4 @@
 <div class="container">
     <top-bar></top-bar>
-    <div class="itemlist">
-        <table>
-            <tbody>
-                <div *ngFor="let item of items; index as i">
-                    <tr>
-                        <td>
-                            <span class="item-row"> {{ i+1 }}. </span>
-                            <a class="item-row" [href]="item.url">{{item.title}}</a>
-                        </td>
-                    </tr>
-                    <tr class="subtext">
-                        <td class="subtext-row">
-                            <span>{{item.score}} points by {{item.by}}</span>
-                            <span> | </span>
-                            <span>{{item.score}} comments</span>
-                        </td>
-                    </tr>
-                </div>
-            </tbody>
-        </table>
-    </div>
+    <router-outlet></router-outlet>
 </div>
