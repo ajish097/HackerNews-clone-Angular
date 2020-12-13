@@ -44,7 +44,7 @@ export class PostsComponent implements OnInit {
     this.appService.getTopPosts().subscribe((postIds: number[]) => {
       let newPostIds: number[];
       newPostIds = [];
-      for(let i=0; i< 5; i++) {
+      for (let i = 0; i < 5; i++) {
         newPostIds.push(postIds[i]);
       }
       newPostIds.forEach(postId => {
