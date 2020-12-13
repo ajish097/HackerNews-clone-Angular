@@ -2,11 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-comment-section',
-  template: `
-    <p>
-      comment-section works!
-    </p>
-  `,
+  templateUrl: './comment-section.component.html',
   styles: [
   ]
 })
