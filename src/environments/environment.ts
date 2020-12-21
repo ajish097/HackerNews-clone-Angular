@@ -7,7 +7,7 @@ export const environment = {
 };
 
 export const ENDPOINTS = {
-  baseUrl : ' https://hacker-news.firebaseio.com/v0/',
+  baseUrl: 'https://hacker-news.firebaseio.com/v0/',
   topStories: 'topstories.json',
   item: 'item/'
 }

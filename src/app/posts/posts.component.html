@@ -1,18 +1,19 @@
 <div class="itemlist">
     <table>
         <tbody>
-            <div *ngFor="let item of items; index as i">
+            <div *ngFor="let item of items; index as idx">
                 <tr>
+                    <td> <span class="item-row"> {{ item.postId}}. </span></td>
                     <td>
-                        <span class="item-row"> {{ i+1 }}. </span>
                         <a class="item-row" [href]="item.url">{{item.title}}</a>
                     </td>
                 </tr>
                 <tr class="subtext">
+                    <td></td>
                     <td class="subtext-row">
                         <span>{{item.score}} points by {{item.by}}</span>
                         <span> | </span>
-                        <a routerLink="/comments"  class="link">{{item.score}} comments</a>
+                        <a routerLink="/comments" class="link">{{item.score}} comments</a>
                     </td>
                 </tr>
             </div>
