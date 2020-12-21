@@ -1,4 +1,5 @@
-export interface item {
+export interface Item {
+    postId: number
     by: string,
     descendants: number,
     id: number,
