@@ -2,6 +2,8 @@
 
 preview 
 
+![Alt text](src/screenshots/home-page.png?raw=true "Title")
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
 
 ## Development server
