@@ -11,19 +11,26 @@ export class AppService {
   topPostIds: number[];
   readonly pagePerPost: number;
   constructor(private http: HttpClient) {
-    this.pagePerPost = 25;
+    this.pagePerPost = 20;
   }
 
-  async getPosts(pageID: number = 2) {
+  async getPosts(pageID: number = 1) {
     let postsData: Array<Item> = [];
+    let getPostsPromiseArray: Array<Promise<Item>> = [];
     this.topPostIds = await this.getTopPostList().toPromise();
     let { start, end } = this.getRange(pageID);
     let postIDs = this.topPostIds.slice(start, end);
-    for (let idx = 0; idx < postIDs.length; idx++) {
-      let data: Item = await this.getPostData(postIDs[idx]).toPromise();
-      data.postId = idx + 1;
-      postsData.push(data);
-    }
+    postIDs.forEach((postID) => {
+      getPostsPromiseArray.push(this.getPostData(postID).toPromise());
+    });
+
+    Promise.all(getPostsPromiseArray)
+      .then((response: Item[])=> {
+        response.forEach((post: Item, idx: number) => {
+          post.postId = idx + 1;
+          postsData.push(post);
+        })
+      });
     return postsData;
   }
 
