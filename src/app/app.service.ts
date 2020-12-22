@@ -25,11 +25,14 @@ export class AppService {
     });
 
     Promise.all(getPostsPromiseArray)
-      .then((response: Item[])=> {
+      .then((response: Item[]) => {
         response.forEach((post: Item, idx: number) => {
           post.postId = idx + 1;
           postsData.push(post);
         })
+      })
+      .catch((error) => {
+        console.log(error);
       });
     return postsData;
   }
