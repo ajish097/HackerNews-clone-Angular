@@ -10,7 +10,6 @@ import { Item } from './app.model';
 export class AppService {
   topPostIds: number[];
   readonly pagePerPost: number;
-  comments: Array<Item> = [];
   constructor(private http: HttpClient) {
     this.pagePerPost = 20;
   }
@@ -47,8 +46,8 @@ export class AppService {
   }
 
   async getComments(Id: number) {
-    await this.makeCall(this.comments, [Id])
-    return this.comments;
+    let comments: Array<Item> = [];
+    return await this.makeCall(comments, [Id]);
   }
 
   private getRange(pageID: number) {
@@ -67,10 +66,11 @@ export class AppService {
       comments.push(response); 
       this.makeCall(comments, response?.kids);
     }
+    return comments;
   }
 
   prepareCommentData(comments: Array<Item>, commentsTree: Item) {
-    let childComments = this.comments.filter((comment: Item) => {
+    let childComments = comments.filter((comment: Item) => {
       return comment?.parent === commentsTree.id
     })
     if (!childComments)

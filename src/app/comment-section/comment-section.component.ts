@@ -18,17 +18,15 @@ export class CommentSectionComponent implements OnInit {
   commentsTreeArray: Array<Item> = []
   parentId: number;
   ngOnInit(): void {
-
+    this.comments = this.route.snapshot.data['comments'];
     this.route.paramMap.subscribe(params => {
       this.Id = params.get("id");
-      this.comments = this.route.snapshot.data['comments'];
       this.commentsTree = { id: parseInt(this.Id) } as Item;
     })
   }
 
   ngDoCheck() {
     this.appservice.prepareCommentData(this.comments, this.commentsTree);
-    this.commentsTreeArray = []
     this.commentsTreeArray = this.commentsTree.comments;
   }
 }
