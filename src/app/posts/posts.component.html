@@ -13,7 +13,7 @@
                     <td class="subtext-row">
                         <span>{{item.score}} points by {{item.by}}</span>
                         <span> | </span>
-                        <a routerLink="/comments" class="link">{{item.score}} comments</a>
+                        <a [routerLink]='"/comments/"+item.id' class="link"> {{item.descendants}} comments</a>
                     </td>
                 </tr>
             </div>

@@ -1,0 +1,15 @@
+ul, li {
+    margin: 10px;
+    list-style-type: none ;
+    border-radius: 5px ;
+}
+
+p {
+    line-height: .8px;
+    margin: 10px;
+}
+
+#content {
+    background-color: rgb(236, 232, 206);
+    border-radius: 5px;
+}

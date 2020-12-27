@@ -18,8 +18,4 @@ export class PostsComponent implements OnInit {
   ngOnInit() {
     this.items = this.route.snapshot.data['posts'];
   }
-
-  // ngDoCheck() {
-  //   this.items.sort((obj1, obj2) => obj1.postId - obj2.postId);
-  // }
 }

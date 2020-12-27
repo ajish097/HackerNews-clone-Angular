@@ -4,9 +4,12 @@ export interface Item {
     descendants: number,
     id: number,
     kids: number[],
+    parent: number,
     score: number,
     time: number,
+    text: string,
     title: string,
+    comments: Array<Item>
     type: string,
     url: string
 }

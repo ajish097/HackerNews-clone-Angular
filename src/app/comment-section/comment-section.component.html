@@ -1,0 +1,18 @@
+<div>
+    <ul>
+        <ng-container *ngTemplateOutlet="recursiveListTmpl; context:{ commentsTreeArray: commentsTreeArray }">
+        </ng-container>
+    </ul>
+</div>
+
+<ng-template #recursiveListTmpl let-commentsTreeArray="commentsTreeArray">
+    <ng-container *ngFor="let comment of commentsTreeArray">
+        <li>
+            <ul id="content" *ngIf="comment?.text" [innerHtml]='comment?.text'></ul>
+            <ul *ngIf="comment.comments?.length > 0">
+                <ng-container *ngTemplateOutlet="recursiveListTmpl; context:{ commentsTreeArray: comment.comments }">
+                </ng-container>
+            </ul>
+        </li>
+    </ng-container>
+</ng-template>

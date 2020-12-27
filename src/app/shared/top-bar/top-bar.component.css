@@ -13,3 +13,12 @@ a.top-bar-child {
     cursor: pointer;
     background-color: inherit;
 }
+ 
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
