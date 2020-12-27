@@ -1,3 +1,4 @@
+
 ul, li {
     margin: 10px;
     list-style-type: none ;
@@ -9,7 +10,12 @@ p {
     margin: 10px;
 }
 
+
 #content {
     background-color: rgb(236, 232, 206);
     border-radius: 5px;
 }
+
+:host ::ng-deep span { 
+    color: grey;
+  }
