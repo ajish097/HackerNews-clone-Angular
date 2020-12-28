@@ -7,8 +7,8 @@ import { PostsComponent } from './posts/posts.component';
 
 const routes: Routes = [
   { path: 'comments/:id', component: CommentSectionComponent, resolve: { 'comments': CommentSectionResolver } },
-  { path: '', component: PostsComponent, resolve: { 'posts': PostsResolver } },
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  { path: 'posts/:id', component: PostsComponent, resolve: { 'posts': PostsResolver } },
+  { path: '**', redirectTo: 'posts/1', pathMatch: 'full' }
 ];
 
 @NgModule({

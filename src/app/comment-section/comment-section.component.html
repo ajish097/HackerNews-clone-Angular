@@ -8,7 +8,6 @@
 <ng-template #recursiveListTmpl let-commentsTreeArray="commentsTreeArray">
     <ng-container *ngFor="let comment of commentsTreeArray">
         <li>
-            <!-- <ul id="content"></ul> -->
             <ul id="content" *ngIf="comment?.text"
                 [innerHtml]='"<span>" + comment.by + "</span>" + "<br>" + comment?.text'>
             </ul>

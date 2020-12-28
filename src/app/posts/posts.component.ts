@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Item } from '../app.model';
-import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-posts',
@@ -9,13 +8,20 @@ import { AppService } from '../app.service';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-
-  name: string
   items: Item[] = [];
+  Id: number
 
-  constructor(private appService: AppService, private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) {
+  }
 
   ngOnInit() {
-    this.items = this.route.snapshot.data['posts'];
+    this.route.paramMap.subscribe(params => {
+      this.Id = +params.get("id");
+      this.items = this.route.snapshot.data['posts'];
+    });
+  }
+
+  NavigateToNextPage() {
+    this.router.navigate(['/posts/' + (this.Id + 1)]);
   }
 }

@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from "@angular/router";
+import { ActivatedRouteSnapshot, Resolve } from "@angular/router";
 import { Observable } from "rxjs";
 import { Item } from "../app.model";
 import { AppService } from "../app.service";
@@ -9,10 +9,9 @@ export class PostsResolver implements Resolve<Item> {
     constructor(private appService: AppService) { }
 
     resolve(
-        route: ActivatedRouteSnapshot,
-        state: RouterStateSnapshot
+        route: ActivatedRouteSnapshot
     ): Observable<any> | Promise<any> | any {
-        //route.paramMap.get('id')
-        return this.appService.getPosts();
+        let Id = route.paramMap.get('id')
+        return this.appService.getPosts(parseInt(Id));
     }
 }

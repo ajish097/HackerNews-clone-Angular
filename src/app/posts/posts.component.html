@@ -1,9 +1,9 @@
 <div class="itemlist">
     <table>
         <tbody>
-            <div *ngFor="let item of items; index as idx">
+            <ng-container *ngFor="let item of items; index as idx">
                 <tr>
-                    <td> <span class="item-row"> {{ item.postId}}. </span></td>
+                    <td style="width:20px"> <span class="item-row"> {{ item.postId}}. </span></td>
                     <td>
                         <a class="item-row" [href]="item.url">{{item.title}}</a>
                     </td>
@@ -16,7 +16,10 @@
                         <a [routerLink]='"/comments/"+item.id' class="link"> {{item.descendants}} comments</a>
                     </td>
                 </tr>
-            </div>
+            </ng-container>
         </tbody>
     </table>
+    <div class="footer">
+        <button id="btn_next" *ngIf="items" (click)="NavigateToNextPage()">Next</button>
+    </div>
 </div>

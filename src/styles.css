@@ -36,3 +36,9 @@ a:visited {
     color: #828282;
     padding-left: 1.2rem;
 }
+
+table{
+    table-layout: fixed;
+    width: 100%;
+ }
+ 
