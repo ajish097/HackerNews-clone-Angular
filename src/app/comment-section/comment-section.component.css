@@ -1,12 +1,20 @@
 ul, li {
-    margin: 10px;
     list-style-type: none ;
     border-radius: 5px ;
+    font-size: 9pt;
+    font-family: Verdana, Geneva, sans-serif;
+    overflow: auto;
+}
+
+ul{
+    margin: .5%;
 }
 
 p {
     line-height: .8px;
     margin: 10px;
+    font-size: 9pt;
+    font-family: Verdana, Geneva, sans-serif;
 }
 
 #content {
