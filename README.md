@@ -8,8 +8,6 @@ You can check out the demo here -- [Demo](https://5fea48d9143d2b29e14e3c46--wond
 
 ![Alt text](src/screenshots/home-page.png?raw=true "Title")
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
-
 ### Status
 
 - [x] Build posts section 
