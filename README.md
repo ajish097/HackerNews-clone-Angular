@@ -6,9 +6,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Status
 
-- [ ] Build posts section 
-- [ ] Build recursive comment section 
-- [x] Add pagination  
+- [x] Build posts section 
+- [x] Build recursive comment section 
+- [ ] Add pagination  
 
 
 ### Development server
