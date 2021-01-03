@@ -20,6 +20,6 @@
         </tbody>
     </table>
     <div class="footer">
-        <button id="btn_next" *ngIf="items" (click)="NavigateToNextPage()">Next</button>
+        <button id="btn_next" *ngIf="items.length > 0" (click)="NavigateToNextPage()">Next</button>
     </div>
 </div>
