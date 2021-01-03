@@ -2,7 +2,7 @@
 
 ## Live Demo
 
-You can check out the demo here -- [Demo](https://5fea48d9143d2b29e14e3c46--wonderful-hermann-fed536.netlify.app/)
+You can check out the demo here -- [Demo](https://wonderful-hermann-fed536.netlify.app/)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3ee14222-c775-42d4-84e5-52b48aba6dd1/deploy-status)](https://app.netlify.com/sites/wonderful-hermann-fed536/deploys)
 
